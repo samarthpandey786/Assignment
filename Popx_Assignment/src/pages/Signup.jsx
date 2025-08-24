@@ -1,7 +1,13 @@
 import React from "react";
 import Button from "../components/Button";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+
+  const navigate = useNavigate();
+    const Accout_setting = () => {
+      navigate("/accountsetting")
+    }
   return (
     <div className="px-2 py-6">
       <div className="w-full max-w-md bg-white px-6 py-4">
@@ -96,6 +102,7 @@ const Signup = () => {
 
         {/* Button */}
         <Button
+        onClick={Accout_setting}
           name="Create Account"
           className="w-full bg-[#6c25ff] text-white py-3 rounded-md mt-[65%] "
         />

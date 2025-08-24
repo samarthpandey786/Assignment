@@ -1,7 +1,13 @@
 import React from 'react'
 import Button from '../components/Button'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
+
+  const navigate = useNavigate();
+  const Accout_setting = () => {
+    navigate("/accountsetting")
+  }
   return (
   <>
     {/* // text section  */}
@@ -34,7 +40,9 @@ const Login = () => {
 
     <div className='flex justify-center items-center relative bottom-34'>
     {/* // button section  */}
-    <Button name={"Login"}
+    <Button 
+    onClick={Accout_setting}
+    name={"Login"}
     className='w-[85%] flex bg-gray-300  text-white font-medium items-center justify-center'/>
     </div>
   </>
